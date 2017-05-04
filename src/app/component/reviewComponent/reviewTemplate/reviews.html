@@ -1,1 +1,25 @@
-<h2>All Reviews</h2>
+<h2 class="text-primary">All Reviews</h2><br /><hr />
+<div *ngFor="let review of allReviews | async">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="panel-group">
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <h4><a data-toggle="collapse" href="#{{review.rid}}">{{review.title}}</a>
+                    <span class="pull-right">
+                      {{review.rating}}
+                    </span></h4>
+                </h3>
+              </div>
+              <div id="{{review.rid}}" class="panel-collapse collapse">
+                <div class="panel-body"><h4>{{review.review}}</h4></div>
+                <div class="panel-footer">
+                    <p>{{review.user_id}}<span class="pull-right">{{review.date}}</span></p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div><br /><hr />
