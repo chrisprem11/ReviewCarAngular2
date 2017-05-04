@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="row">
+    <h3 class="text-success">Car Details</h3><hr />
+  </div>
+  <div *ngFor="let car of myCars | async">
+    <div *ngIf="car.id==carId">
+      <div class="row">
+        <div class="col-md-9">
+          <img src="{{car.img}}" class="img img-responsive img-rounded"/>
+        </div>
+        <div class="col-md-3">
+          <label>Name : </label><h3>{{car.manufacturer}} {{car.model}}</h3>
+          <label>Price : </label><h3>{{car.price | currency : 'USD'}}</h3>
+          <h4 class="text-danger"><a href="{{car.wiki}}">Know More about {{car.manufacturer}} {{car.model}} </a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-sm btn-primary pull-right" (click)="goBack()">Back</button><br /><br />
+  <h3 class="text-danger">Related Reviews</h3><hr />
+  <div *ngFor="let review of allReviews | async">
+    <div *ngIf="review.car_id==carId">
+      <div class="row">
+        <div class="panel-group">
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <h4><a data-toggle="collapse" href="#{{review.rid}}">{{review.title}}</a>
+                    <span class="pull-right">
+                      {{review.rating}}
+                    </span></h4>
+                </h3>
+              </div>
+              <div id="{{review.rid}}" class="panel-collapse collapse">
+                <div class="panel-body"><h4>{{review.review}}</h4></div>
+                <div class="panel-footer">
+                    <p>{{review.user_id}}<span class="pull-right">{{review.date}}</span></p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div><br /><hr />
+<div class="row">
+    <div class="col-md-4">
+        <h3 class="text-danger">Add a Review : </h3>
+    </div>
+    <div class="col-md-8">
+          <form (ngSubmit)="onSubmit()">
+              <div>
+                <label class="form-group">Title :</label>
+                <input type="text" [(ngModel)]="title" name="title" class="form-control"/>
+              </div><br />
+              <div>
+                <label class="form-group">Write a Review :</label>
+                <textarea cols="4" rows="10" [(ngModel)]="review" name="review" class="form-control"></textarea>
+              </div><br />
+              <div>
+                <label class="form-group">Rating :</label>
+                <select class="form-control" [(ngModel)]="rating" name="rating">
+                    <option *ngFor="let rating of ratings" [value]="rating">{{rating}}</option>
+                </select>
+              </div><br />
+              <div>
+                <input type="submit" class="btn btn-md btn-success" />
+              </div><br />
+          </form>
+    </div><br />
+  </div><br />
+</div>

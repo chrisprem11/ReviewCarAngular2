@@ -1,0 +1,24 @@
+.jumbotron {
+  margin-bottom: 0px;
+  height:220px;
+  background-image: url('app/image/carLights.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:auto;
+  background-size: cover;
+
+}
+.navbar {
+  margin-top: 0px;
+}
+
+#title{
+  color : yellow;
+  font-style: italic;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 40px;
+  margin-top: 0px;
+  margin-bottom: 80px;
+
+}

@@ -1,0 +1,15 @@
+{
+	"data": [{
+		"uid": 1,
+		"fname": "Raju",
+		"lname": "Pandey",
+		"address": "Washington",
+		"password": "12345"
+	}, {
+    "uid": 2,
+		"fname": "John",
+		"lname": "Papa",
+		"address": "London",
+		"password": "12345"
+	}]
+}

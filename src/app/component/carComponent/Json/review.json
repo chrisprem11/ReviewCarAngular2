@@ -1,0 +1,29 @@
+{
+	"data": [{
+		"rid": 1,
+		"car_id": 1,
+		"title" : "Wonderful Experience. Wow !!",
+		"review": "This is a very nice car. Go for it. I would definitely recommend this.",
+		"rating": 4,
+    "date" : "01-04-2017",
+		"user_id": 1
+	},
+	{
+		"rid": 2,
+		"car_id": 1,
+		"title" : "Simply Awesome !! It is heavenly !",
+		"review": "This is what you expect from a super car. 100Mph in just 5 secs. Superb.",
+		"rating": 5,
+    "date" : "03-04-2017",
+		"user_id": 2
+	},
+	{
+		"rid": 3,
+		"car_id": 2,
+		"title" : "It is Awesome !",
+		"review": "It is worth buying. Had an amazing experience.I never had any problems till date. It feels Awesome.",
+		"rating": 5,
+    "date" : "02-04-2017",
+		"user_id": 2
+	}]
+}
